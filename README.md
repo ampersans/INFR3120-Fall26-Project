@@ -12,7 +12,7 @@ Team:
 Code Ownership:
 
     Justin: table and CRUD logic, logo, Word doc, routes/books.js, views/Books/add.ejs, views/Books/edit.ejs, views/Books/table.ejs, slight changes to config/db.js, public/script/app.js
-    Tristan: initial creation, server.js, config/app.js, models/Book.js, .gitignore, Atlas deployment and Readme
+    Tristan: initial creation, server.js, config/app.js, models/Book.js, .gitignore, Video Edit, Atlas and Render deployment and Readme
 
 
 Project Description:
