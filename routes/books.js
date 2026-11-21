@@ -31,7 +31,7 @@ router.get('/add',async(req,res,next)=>{
     }
     catch (err){
         console.log(err);
-        res.render('Books/list',{
+        res.render('Books/table',{
             error:'Error on Server'
         })
     }
@@ -55,13 +55,13 @@ router.post('/add',async(req,res,next) => {
     }
     catch (err) {
         console.log(err);
-        res.render('Books/list',{
+        res.render('Books/table',{
             error:'Error on Server'
         })
     }
 });
 
-/* Update Operation */
+/* Update Operation - GET*/
 router.get('/edit/:id', async(req,res,next) => {
     try {
         const id = req.params.id;
@@ -77,6 +77,7 @@ router.get('/edit/:id', async(req,res,next) => {
     }
 });
 
+/* Update Operation - POST*/
 router.post('/edit/:id', async(req,res,next) => {
     try {
         let id = req.params.id;
@@ -90,18 +91,30 @@ router.post('/edit/:id', async(req,res,next) => {
             "status":req.body.status,
             "createdAt":req.body.createdAt
         })
-        Book.findByIdaAndUpdate(id,updatedBook).then(()=> {
+        Book.findByIdAndUpdate(id,updateData).then(()=> {
             res.redirect('/')
         })
     } 
     catch (err) {
         console.error(err);
-        res.render('Books/list',{
+        res.render('Books/table',{
             error:'Error on Server'
         })
     }
 });
 
 /* Delete Operation */
+router.get('/delete/:id', async(req,res,next) => {
+    try {
+        const id = req.params.id;
+        Book.deleteOne({_id:id}).then(() => {
+            res.redirect('/')
+        })
+    }
+    catch (err) {
+        console.error(err);
+        next(err);
+    }
+});
 
 module.exports = router;
