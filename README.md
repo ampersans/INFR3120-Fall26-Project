@@ -23,6 +23,10 @@ Live Site URL:
 
     https://infr3120-fall26-project-85s0.onrender.com
 
+Youtube Video URL:
+
+    https://youtu.be/orebLPRQri4
+
 Sources:
 
     All code is original or from INFR3120 lectures
