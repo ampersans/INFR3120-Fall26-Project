@@ -1,1 +1,1 @@
-module.exports={"URI":"mongodb+srv://justinchan2_db_user:5wsqTY5il9tBhPDb@cluster0.wy7p3d1.mongodb.net/library?retryWrites=true&w=majority"}
+module.exports={"URI":"mongodb+srv://justinchan2_db_user:5wsqTY5il9tBhPDb@cluster0.wy7p3d1.mongodb.net/Books"}

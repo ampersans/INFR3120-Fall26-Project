@@ -8,25 +8,40 @@
                 <!--Header Row-->
                 <tr>
                     <th class="titleHeader">Title</th>
-                    <th class="authorHeader">Author</th>
-                    <th class="ISBNHeader">ISBN</th>
-                    <th class="genreHeader">Genre</th>
-                    <th class="copiesHeader">Copies</th>
-                    <th class="statusHeader">Status</th>
-                    <th class="creationHeader">Created At</th>
+                    <th class="authorHeader" style="padding-left:50px">Author</th>
+                    <th class="ISBNHeader" style="padding-left:50px">ISBN</th>
+                    <th class="genreHeader" style="padding-left:50px">Genre</th>
+                    <th class="copiesHeader" style="padding-left:50px">Copies</th>
+                    <th class="statusHeader" style="padding-left:50px">Status</th>
+                    <th class="creationHeader" style="padding-left:10px">Created At</th>
                 </tr>
                 <!--Columns-->
                 <% for(let count=0;count<Books.length;count++) { %>
                     <tr>-
-                        <td class="titlerData"><%= Booklist[count].title %></td>
-                        <td class="authorData"><%= Booklist[count].author %></td>
-                        <td class="ISBNData"><%= Booklist[count].isbn %></td>
-                        <td class="copiesData"><%= Booklist[count].copies %></td>
-                        <td class="statusData"><%= Booklist[count].status %></td>
-                        <td class="creationData"><%= Booklist[count].createdAt %></td>
+                        <td class="titleData"><%= Books[count].title %></td>
+                        <td class="authorData" style="padding-left:50px"><%= Books[count].author %></td>
+                        <td class="ISBNData" style="padding-left:50px"><%= Books[count].isbn %></td>
+                        <td class="copiesData" style="padding-left:50px"><%= Books[count].copies %></td>
+                        <td class="statusData" style="padding-left:50px"><%= Books[count].status %></td>
+                        <td class="creationData" style="padding-left:130px"><%= Books[count].createdAt %></td>
+                        <td class="editButton">
+                            <button>
+                                <a href="/edit/<%= Books[count]._id %>">Edit</a>
+                            </button>
+                        </td>
+                        <td class="deleteButton">
+                            <button>
+                                <a href="/delete/<%= Books[count]._id %>">Delete</a>
+                            </button>
+                        </td>
                     </tr>
                 <%} %>
             </table>
         </div>
     </div>
+    <br>
+    <br>
+    <button>
+        <a href="/add" role="button">Add book to library</a>
+    </button>
 </main>
