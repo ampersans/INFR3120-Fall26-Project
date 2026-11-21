@@ -1,26 +1,29 @@
 <!--Main content-->
 <main class="container">
     <div class="row">
-        <div class="offset-md-1 col-md-10">
+        <div class="table">
             <h1><%= title %></h1>
             <br>
-            <table class="table table-bordered table-striped table-hover">
+            <table class="booksTable">
                 <!--Header Row-->
                 <tr>
-                    <th class="text-center col-2">Name</th>
-                    <th class="text-center col-2">Author</th>
-                    <th class="text-center col-1">Published</th>
-                    <th class="col-4">Description</th>
-                    <th class="text-center col-1">Price</th>
+                    <th class="titleHeader">Title</th>
+                    <th class="authorHeader">Author</th>
+                    <th class="ISBNHeader">ISBN</th>
+                    <th class="genreHeader">Genre</th>
+                    <th class="copiesHeader">Copies</th>
+                    <th class="statusHeader">Status</th>
+                    <th class="creationHeader">Created At</th>
                 </tr>
                 <!--Columns-->
                 <% for(let count=0;count<Books.length;count++) { %>
-                    <tr>
-                        <td class="text-center col-2"><%= Booklist[count].name %></td>
-                        <td class="text-center col-2"><%= Booklist[count].author %></td>
-                        <td class="text-center col-1"><%= Booklist[count].published %></td>
-                        <td class="col-4"><%= Booklist[count].description %></td>
-                        <td class="text-center col-1"><%= Booklist[count].price %></td>
+                    <tr>-
+                        <td class="titlerData"><%= Booklist[count].title %></td>
+                        <td class="authorData"><%= Booklist[count].author %></td>
+                        <td class="ISBNData"><%= Booklist[count].isbn %></td>
+                        <td class="copiesData"><%= Booklist[count].copies %></td>
+                        <td class="statusData"><%= Booklist[count].status %></td>
+                        <td class="creationData"><%= Booklist[count].createdAt %></td>
                     </tr>
                 <%} %>
             </table>
