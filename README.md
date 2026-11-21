@@ -6,6 +6,7 @@ Team:
 
     Justin
     Tristan
+    Abdullah
 
 
 Code Ownership:
@@ -20,7 +21,7 @@ Project Description:
 
 Live Site URL:
 
-    url
+    https://infr3120-fall26-project-85s0.onrender.com
 
 Sources:
 
